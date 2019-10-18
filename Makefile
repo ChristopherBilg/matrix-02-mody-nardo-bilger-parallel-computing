@@ -1,4 +1,4 @@
-PGMS=mmult_omp_timing matrix_times_vector hello pi mxv_omp_mpi mmult_mpi_omp
+PGMS=mmult_omp_timing matrix_times_vector hello pi mxv_omp_mpi mmult_mpi_omp basic_matrix_multiplication basic_simd_multiplication
 
 all:	${PGMS}
 
@@ -22,6 +22,10 @@ mmult_omp_timing.o:	mmult_omp_timing.c
 
 matrix_times_vector:	matrix_times_vector.c
 	mpicc -O3 -o matrix_times_vector matrix_times_vector.c
+
+basic_matrix_multiplication:
+	mpicc -o basic_matrix_multiplication basic_matrix_multiplication.c
+	mpicc -O3 -o basic_simd_multiplication basic_matrix_multiplication.c
 
 hello:	hello.c
 	mpicc -O3 -o hello hello.c
