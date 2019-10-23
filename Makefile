@@ -41,6 +41,7 @@ mxv_omp_mpi:	mxv_omp_mpi.c
 
 clean:
 	rm -r automation_files/
+	rm *.csv
 	rm -f *.txt
 	rm -f *.o
 	rm -f ${PGMS}
