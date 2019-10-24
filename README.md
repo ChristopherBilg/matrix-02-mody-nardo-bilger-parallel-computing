@@ -29,3 +29,6 @@ x
 
 ## MPI Graph
 ![MPI Graph](mpi.png)
+
+## Combined Graph
+![Combined Graph](combined.png)
