@@ -40,7 +40,9 @@ mxv_omp_mpi:	mxv_omp_mpi.c
 	mpicc -fopenmp -O3 -o mxv_omp_mpi mxv_omp_mpi.c
 
 clean:
-	rm -r automation_files/
+	rm -rf automation_files/
+	rm -f *.csv
+	rm -f *.png
 	rm -f *.txt
 	rm -f *.o
 	rm -f ${PGMS}
