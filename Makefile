@@ -1,4 +1,4 @@
-PGMS=mmult_omp_timing matrix_times_vector hello pi mxv_omp_mpi mmult_mpi_omp basic_matrix_multiplication basic_simd_multiplication openmp_matrix_multiplication
+PGMS=mmult_omp_timing matrix_times_vector hello pi mxv_omp_mpi mmult_mpi_omp basic_matrix_multiplication basic_simd_multiplication openmp_matrix_multiplication extraction
 
 all:	${PGMS}
 
@@ -38,6 +38,9 @@ pi:	pi.c
 
 mxv_omp_mpi:	mxv_omp_mpi.c
 	mpicc -fopenmp -O3 -o mxv_omp_mpi mxv_omp_mpi.c
+
+#extraction: extraction.c
+#	gcc -o extraction extraction.c
 
 clean:
 	rm -rf automation_files/
