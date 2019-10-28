@@ -5,6 +5,7 @@
 int getNumberOfLines(char *filename);
 double* extractMatrixFromFile(char *filename, int nrows);
 int getArrayLength(int nrow);
+void printToFile(double* matrix, int size);
 
 int getNumberOfLines(char *filename)
 {
@@ -83,6 +84,38 @@ int getArrayLength(int nrow)
 {
     return (nrow * nrow);
 }
+
+void printToFile(double* matrix, int size)
+{
+    char* outputString = malloc(sizeof(char) * size);
+    char* filename = "matrixOutput";
+    char tempHolder[50];
+    int i;
+    //printf("\nSize: %d\n", size);
+    
+    FILE *fp = fopen(filename, "w");
+    
+        for(i=0; i < (size*size); i++)
+        {
+            sprintf(tempHolder,"%.2f", matrix[i]);
+            //printf("tempHolder: %s\n", tempHolder);
+           
+            
+            if((i+1) % size == 0)
+            {
+                 strcat(tempHolder, "\n");
+            }
+            else
+            {
+                 strcat(tempHolder, ", ");
+            }
+            
+            fprintf(fp, "%s", tempHolder);
+        }
+    
+    fclose(fp);
+    free(outputString);
+}
 /*
 //printf("main\n");
     int nrows;
@@ -105,6 +138,9 @@ int getArrayLength(int nrow)
             printf("%lf ", extractedMatrix[i]);
         }
         printf("\n");
+
+	printToFile(extractedMatrix, nrows);
+        
         free(extractedMatrix);
     }
 */
