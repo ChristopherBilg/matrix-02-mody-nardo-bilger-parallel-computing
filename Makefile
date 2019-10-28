@@ -39,6 +39,9 @@ pi:	pi.c
 mxv_omp_mpi:	mxv_omp_mpi.c
 	mpicc -fopenmp -O3 -o mxv_omp_mpi mxv_omp_mpi.c
 
+extraction: extraction.c
+	gcc -o extraction extraction.c
+
 clean:
 	rm -rf automation_files/
 	rm -f *.csv
