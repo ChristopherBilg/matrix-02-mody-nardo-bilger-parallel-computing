@@ -44,6 +44,7 @@ extraction_auto: extraction_auto.c
 
 clean:
 	rm -rf automation_files/
+	rm -f matrixOutput
 	rm -f *.csv
 	rm -f *.txt
 	rm -f *.o
