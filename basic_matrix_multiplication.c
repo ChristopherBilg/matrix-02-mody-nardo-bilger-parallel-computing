@@ -5,13 +5,13 @@
 
 int main(int argc, char** argv) {
 	if(argc < 2) {
-		printf("Valid syntax: basic_matrix_multiplication <int>\n");
+	  printf("Valid syntax: %s <int>\n", argv[0]);
 		exit(EXIT_FAILURE);
 	}
 
 	int size = atoi(argv[1]);
 	if(!size || size < 1) {
-		printf("Valid syntax: basic_matrix_multiplication <int>\n");
+	  printf("Valid syntax: %s <int>\n", argv[0]);
 		exit(EXIT_FAILURE);
 	}
 
