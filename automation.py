@@ -76,3 +76,5 @@ with open(csv_file, "w+") as csvfile:
 
 gnuplot_cmd = "gnuplot gnuplot"
 os.system(gnuplot_cmd)
+
+os.system("./extraction_auto")
