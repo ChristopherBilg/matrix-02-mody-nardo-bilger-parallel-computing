@@ -16,7 +16,7 @@ We locked the master branch from all contributions that are not on a separate br
 I implemented the function that allows the automated extraction of matrices from a file no matter the size; this gets stored in a vector of doubles to allow for ease of use and reference. In addition, I also implemented the function that then converts the double vector to strings and such prints it to an output file as a way of keeping track of the matrix multiplication product.
 
 ### Tanmay Mody
-x
+I worked on implementing the MPI matrix multiplication however I couldn't get it to compile successfully. I also worked on using parallel computing in Java. I contributed to the README.md file as well.
 
 ### Chris Bilger
 I implemented the basic matrix multiplication, SIMD optimized matrix multiplication and OpenMP algorithms. I automated the pipeline of executables and gnuplot using a Python 3 script named 'automation.py'. I also wrote up the README.md file, although we all contributed equally the write up.
