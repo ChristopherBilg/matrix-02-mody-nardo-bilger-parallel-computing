@@ -13,7 +13,7 @@ The algorithms that we implemented are the following:
 We locked the master branch from all contributions that are not on a separate branch. We reviewed all changes to the branches prior to merging them into the master branch. We also locked project administrators from directly committing to the master branch.
 
 ### Steven Nardo
-x
+I implemented the function that allows the automated extraction of matrices from a file no matter the size; this gets stored in a vector of doubles to allow for ease of use and reference. In addition, I also implemented the function that then converts the double vector to strings and such prints it to an output file as a way of keeping track of the matrix multiplication product.
 
 ### Tanmay Mody
 x
